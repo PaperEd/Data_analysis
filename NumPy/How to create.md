@@ -61,11 +61,6 @@ print(np.arange(3, 15, 3)) # 시작, 끝(포함 X), 증가 수
 #### 2차원 배열으로 생성하려면?
 `arr = np.arange(12).reshape(3,4)` 처럼 `reshape`를 사용하자
 
-### np.random.rand( ), np.random.randn( )
-- `rand`는 uniform 분포를 따르는 난수를 생성한다.
-- `randn`은 가우시안 정규 분포를 따르는 난수를 생성한다.
-- `random.seed`를 사용해 시드값을 지정할 수 있다.
-
 ### np.linespace( 시작, 끝, 개수 )
 - 정해진 구간을 지정한 수만큼 분할한다.
 ```
@@ -86,7 +81,6 @@ print(arr)
 
 ### flatten( )
 - 다차원 배열을 1차월 배열로 변환시켜 준다.
-- `arr.flatten( )`과 같은 방식으로 사용한다.
 
 ### hstack( )
 - 행의 수가 같은 두 개 이상의 배열을 옆으로 연결한다.
