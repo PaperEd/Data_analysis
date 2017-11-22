@@ -61,7 +61,7 @@ print(np.arange(3, 15, 3)) # 시작, 끝(포함 X), 증가 수
 #### 2차원 배열으로 생성하려면?
 `arr = np.arange(12).reshape(3,4)` 처럼 `reshape`를 사용하자
 
-### np.linespace( 시작, 끝, 개수 )
+### np.linspace( 시작, 끝, 개수 )
 - 정해진 구간을 지정한 수만큼 분할한다.
 ```
 arr = np.linspace(0, 100, 5)
