@@ -38,19 +38,19 @@ frame = DataFrame(data)
   - 2차원 ndArray와 같은 방식으로 취급되지만 값이 NA가 된다.
 
 ### columns=
-- `columns=` 을 이용해 행의 순서를 정할 수 있다
+- `columns=` 을 이용해 열의 순서를 정할 수 있다
 - ex) Dataframe(data, `colmuns=['money', 'date']`)
 
 ### data에 없는 값을 넘기면?
 - `NaN` 값이 저장된다.
 
-### DataFrame의 행 지정 방법
+### DataFrame의 열 지정 방법
 - 딕셔너리 형식의 표현법
   - `frame['date']` 
 - 속성 형식의 접근 방법
   - `frame.date`
 
-### DataFrame의 열 지정 방법
+### DataFrame의 행 지정 방법
 
 #### .iloc
 - 정수만 지정할 수 있다
@@ -79,18 +79,22 @@ print(frame.ix[0]) # frame는 How to create에서 만든 DataFrame이다.
 ### 행과 열 뒤집기
 - `NumPy`처럼 `.T` 를 쓰면 된다.
 
-## Index 객체
+### Index 객체
 
-### Index
+#### Index
 - 가장 일반적인거
 
-### Int64Index
+#### Int64Index
 - 정수 값을 위한 인덱스
 
-### MultiIndex
+#### MultiIndex
 - 단일 축에 여러 단계의 색인을 표현
 - `Tuple`의 배열과 유사하다
 
-### DatetimeIndex
+#### DatetimeIndex
 - 나노초 타임스탬프
 - `NumPy`의 `datetime64`로 표현된다  
+
+#### PeriodIndex
+- 기간 데이터를 위한 인덱스
+
