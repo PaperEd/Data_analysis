@@ -31,10 +31,10 @@ obj2.reindex(range(6), method='pad')
     dtype: object
 ```
 
-- `DataFrame`에서 열은 `columns=` 예약어를 사용해서 재색인 할 수 있다.
+- `DataFrame`에서 각 행마다의 요소는 `columns=` 예약어를 사용해서 재색인 할 수 있다.
 - 기본값은 행이다.
 ### .drop( )
-- 하나의 행 혹은 열을 제거해준다.
+- 하나의 행 혹은 행의 요소를 제거해준다.
 ```
 frame = DataFrame(np.arange(9).reshape(3, 3), index=['a', 'b', 'c'],
                   columns=['First', 'Second', 'Third'])
@@ -46,3 +46,28 @@ print(frame)
    c      6       7      8
 
 ```
+- `axis=` 속성에 `columns`를 넣어 행마다 들어가는 요소를 삭제할 수 있다.
+```
+frame = frame.drop('First', axis="columns")
+```
+
+### Indexing
+- 색인이 꼭 정수가 아니여도 된다.
+
+#### Series
+```
+obj3 = Series(np.arange(4, 8), index=['a', 'b', 'c', 'd'])
+
+obj3['b']           obj3[[1, 3]]
+-> 5                -> b    5
+obj3[1]                d    7
+->5                    dtype: int32
+
+obj3[obj3 <= 5]     obj3['b': 'c'] 
+-> a    4           -> b    5
+   b    5              c    6
+   dtype: int32        dtype: int32
+```
+#### DataFrame
+
+
