@@ -7,7 +7,7 @@ arr = np.array(data1)
 ```
 ### **np.zeros()**  
 - 0으로 초기화한 `ndarray` 생성  
-```
+```python
 np.zeros(10)  
 -> array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 np.zeros((2,2))  
@@ -24,7 +24,7 @@ np.zeros((2,2))
 ### **np.eye()**
 - N * N 크기의 행렬 생성
 - 좌상단에서 우하단을 잇는 대각선은 1로 채워진다.
-```
+```py
 array = np.eye(3)
 print(array)
 -> [[1, 0, 0],
@@ -33,7 +33,7 @@ print(array)
 ```
 ### np.zeros_like( ), ones_like( ), empty_like( ), full_like( )
 - 인자로 들어가는 배열과 같은 크기의 배열을 생성한다.
-```
+```py
 arr = np.ones(5)
 arr2 = np.zeros_like(arr)
 print(arr2)
@@ -43,7 +43,7 @@ print(arr2)
 - 잘 된다
 ### np.full( )
 - 첫번째 값은 배열의 크기, 두번째 값은 배열에 들어갈 값인 배열을 생성한다.
-```
+```py
 arr = np.full((2, 2), 3)
 print(arr)
 ->[[3, 3],
@@ -52,7 +52,7 @@ print(arr)
 ### np.arange( )
 - 특정한 규칙에 따라 증가하는 수열을 만든다.
 - 기존 파이썬의 `range`라고 볼 수 있다
-```
+```py
 print(np.arange(5)) # 0 .. n - 1
 -> [0, 1, 2, 3, 4]
 print(np.arange(3, 15, 3)) # 시작, 끝(포함 X), 증가 수
@@ -63,7 +63,7 @@ print(np.arange(3, 15, 3)) # 시작, 끝(포함 X), 증가 수
 
 ### np.linspace( 시작, 끝, 개수 )
 - 정해진 구간을 지정한 수만큼 분할한다.
-```
+```py
 arr = np.linspace(0, 100, 5)
 print(arr)
 ->[0., 25., 50., 75., 100.]
@@ -84,7 +84,7 @@ print(arr)
 
 ### hstack( )
 - 행의 수가 같은 두 개 이상의 배열을 옆으로 연결한다.
-```
+```py
 arr1 = np.ones((2, 2))
 arr2 = np.zeros_like(arr1)
 print(np.hstack([arr1, arr2]))
@@ -94,7 +94,7 @@ print(np.hstack([arr1, arr2]))
 
 ### vstack( )
 - 열의 수가 같은 두개 이상의 배열을 위아래로 연결한다.
-```
+```py
 arr1 = np.ones((2, 2))
 arr2 = np.zeros_like(arr1)
 print(np.vstack([arr1, arr2]))
@@ -107,7 +107,7 @@ print(np.vstack([arr1, arr2]))
 ### dstack( )
 - 행이나 열이 아닌 깊이 방향으로 배열을 합친다.
 - 다차원 배열을 만든다는 소리인것 같다.
-```
+```py
 arr1 = np.ones((2, 2))
 arr2 = np.zeros_like(arr1)
 print(np.vstack([arr1, arr2]))
@@ -119,7 +119,7 @@ print(np.vstack([arr1, arr2]))
 
 ### tile( )
 - 동일한 배열을 반복하여 연결한다
-```
+```py
 a = np.array([1, 2, 3])
 np.tile(a, (2, 2))
 -> [[1, 2, 3, 1, 2, 3],
