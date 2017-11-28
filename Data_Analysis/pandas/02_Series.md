@@ -8,11 +8,11 @@
 
 ### How to create
 - `Series`를 이용해 생성할 수 있다.
-```
+```py
 obj = Series([1, 2, 3, 4])
 
 obj
--> 0    3
+=> 0    3
    1    3
    2    3
    3    3

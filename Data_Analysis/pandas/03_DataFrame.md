@@ -4,11 +4,11 @@
 
 ### How to create
 - 흔한 방법은 같은 길이의 리스트에 담긴 사전을 이용하거나 `NumPy` 배열을 사용하는 법이다.
-```
+```py
 data = {'date': [10, 11, 12],
         'money': [1000, 2000, 3000]}
 frame = DataFrame(data)
-->     date  money
+=>     date  money
   0    10   1000
   1    11   2000
   2    12   3000
@@ -56,21 +56,22 @@ frame = DataFrame(data)
 #### .loc
 - 라벨, 즉 딕셔너리 형식만 지정할 수 있다.
 
-#### .ix
+#### .ix 
+- **더이상 사용되지 않는다고 한다.**
 - 정수와 딕셔너리 형식 모두 사용할 수 있다.
-```
+```py
 print(frame.ix[0]) # frame는 How to create에서 만든 DataFrame이다.
--> date     10
+=> date     10
    money  1000
    Name: 0, dtype: int64
 ```
 
-### 새로운 행 대입하기
+### 새로운 행의 요소 대입하기
 - 기존에 없는 새로운 행을 대입한다.
-- `frame['hour'] = [1, 2, 3]` 이런 식으로 한다.
+- `frame['hour'] = [1, 2, 3]` 과 같은 방식으로 대입한다.
 - 하지만 기존 DataFrame과 크기가 같아야 한다.
 
-### 행 삭제하기
+### 행의 요소 삭제하기
 - 파이썬처럼 `del` 명령어를 사용하면 된다.
 - `del frame['hour']` 과 같은 방식으로 사용한다.
 

@@ -42,23 +42,23 @@
 
 ### astype
 - `ndarray`의 `astype` 메소드를 사용해 배열의 `dtype`을 다른 형으로 명시적으로 변경 가능하다.
-```
+```py
      arr = np.array([1, 2, 3, 4, 5])
       arr.dtype
-      -> dtype('int64')
+      => dtype('int64')
       
       float_arr = arr.astype(np.float64)
       float_arr.dtype
-      -> dtype('float64')
+      => dtype('float64')
 ```
   - 부동소숫점 숫자를 정수형을 변환하면 소수점 아래자리는 버려진다.
-```
+```py
       arr = np.array([1.2, 3.4])
       arr
-      -> array([1.2, 3.7])
+      => array([1.2, 3.7])
 
       arr.astype(np.int32)
-      -> array([1, 3] dtype=int32)
+      => array([1, 3] dtype=int32)
 ```
 - `astype`을 호출하면 `dtype`이 이전 `dtype`과 같아도 항상 새로운 배열을 생성함.
 ---
